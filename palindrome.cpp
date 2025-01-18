@@ -54,6 +54,7 @@ class Solution2
                 // make sure both sides stop at alphanumeric characters first
                 // conditional expression '&& left_idx < right_idx' is used to deal with 'the middle 2 chars are non-alphanumeric' situation, which have chars of a even number
                 // the order of two while loop below not matter
+                // isAlphaNumeric: {first=bool, second=ASCII char}
                 while (!isAlphaNumeric(s[right_idx]).first && left_idx < right_idx) // if the right side stops at a non-alphanumeric character
                 {
                     right_idx --;
