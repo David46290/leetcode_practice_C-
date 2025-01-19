@@ -104,7 +104,7 @@ public:
             // if parens.find(c) is not parens.end(), that means there is a key that is c
             // which means we meet close bracket in this case
             // if parens.find(c) is parens.end(), that means there is no key like c
-            // so that must be open bracket
+            // so c must be open bracket
             if (parens.find(c) != parens.end()) // meet close bracket => match with open bracket stack
             {
                 if (open.empty())
