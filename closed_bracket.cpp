@@ -119,7 +119,7 @@ public:
 
                 open.pop();
 
-            } else
+            } else // meet open bracket 
             {
                 open.push(c); // stack open bracket
             }
