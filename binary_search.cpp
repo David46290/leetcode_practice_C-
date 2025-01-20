@@ -52,12 +52,21 @@ public:
 
         while (l <= r) {
             int m = l + ((r - l) / 2);
-            if (nums[m] > target) {
-                r = m - 1;
+            // check whether the middle element is target
+            // if it's bigger than the target => we need to go backward (left side)
+            //      left_idx not changed, but new right_idx becomes the middle_idx
+            // if it's smaller than the target => we need to go forward (right side)
+            //      right_idx not changed, but new left_idx becomes the middle_idx
+            // if no -/+ 1 for right/left idx
+            // the loop will stuck at where middle_idx = left idx
+            // and the left_idx will always be smaller than right_idx
+            if (nums[m] > target)
+            {
+                r = m - 1; // -1 because the current middle_idx is out of search range
             } else if (nums[m] < target) {
                 l = m + 1;
             } else {
-                return m;
+                return m; // +1 because the current middle_idx is out of search range
             }
         }
         return -1;
