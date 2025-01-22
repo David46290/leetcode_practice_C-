@@ -12,7 +12,7 @@ using namespace std;
       // 3 constructors
       ListNode() : val(0), next(nullptr) {} // assign 0 to val; null to next
       ListNode(int x) : val(x), next(nullptr) {} // assign x to val; null to next
-      ListNode(int x, ListNode *next) : val(x), next(next) {} // assign x to val; next(of the previous line) to next
+      ListNode(int x, ListNode *next) : val(x), next(next) {} // assign x to val; next(of the argument) to next
       
  };
 
