@@ -28,9 +28,9 @@ class linked_list
         // h: head node, n: node, v: nums, v_size: numsSize
         // (nums) v[0], v[1], v[2], v[3], v[v_size]
         // (init)                            h
-        // (1st)                      h  <-  n
-        // (2nd)               h <-   n  <-  n
-        // (3rd)         h <-  n <-   n  <-  n
+        // (1st)                      h  ->  n
+        // (2nd)               h ->   n  ->  n
+        // (3rd)         h ->  n ->   n  ->  n
         // ... ...
         ListNode *new_node = new ListNode(value); // creating space for new ListNode sturcture, and the pointer "new_node" can point to it
         if (head == NULL) // if the list is empty
